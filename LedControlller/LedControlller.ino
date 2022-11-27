@@ -79,10 +79,10 @@ void loop() {
 uint32_t set_color(int palette, int speed){
    switch (palette) {
     case 0: 
-    return Rainbow(millis()/(100-speed+1));
+    return pixels.Color(255, 255, 255);
     
     case 1: 
-    return Sunset(millis()/(100-speed+1));
+    return Rainbow(millis()/(100-speed+1));
     
     case 2: 
     return Ocean(millis()/(100-speed+1));
@@ -98,6 +98,9 @@ uint32_t set_color(int palette, int speed){
     
     case 6: 
     return USA(millis()/(100-speed+1));
+    
+    case 7: 
+    return Sunset(millis()/(100-speed+1));
     
    }
 }
